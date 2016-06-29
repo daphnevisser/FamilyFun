@@ -1,5 +1,56 @@
-.topbar {
-  height: 50px;
-  width: 100%;
-  background-color: red;
+/* ==============================
+   VARIABLES
+============================== */
+$font-stack: 'Montserrat', sans-serif;
+$font-special: 'Cabin Sketch', cursive;
+$primary-color: #22313F;
+$text-color-light: #BFBFBF;
+
+/* ==============================
+   BASIC
+============================== */
+body {
+    font-family: $font-stack;
+    font-size: 16px;
+
 }
+.app, body {
+    background-color: $text-color-light;
+}
+ul {
+    margin-bottom: 0;
+}
+/* ==============================
+   NAVBAR
+============================== */
+.topbar {
+    height: 50px;
+    width: 100%;
+    background-color: $primary-color;
+    .input-group {
+        max-width: 70%;
+        float: right;
+        margin-top: 8px;
+        .input-group-btn {
+            button {
+                background-color: $text-color-light;
+            }
+            i {
+                color: $primary-color;
+            }
+        }
+    }
+    .logo {
+        max-width: 30%;
+        float: left;
+        color: $text-color-light;
+        font-weight: bold;
+        font-family: $font-special;
+        font-size: 2em;
+        letter-spacing: 1.5px;
+        margin-top: 10px;
+    }
+}
+/* ==============================
+   SEARCH RESULTS
+============================== */

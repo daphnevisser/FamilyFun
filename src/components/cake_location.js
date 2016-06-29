@@ -10,7 +10,7 @@ class CakeLocation extends Component {
     }
 
     render() {
-        return <div>{this.getLocation()}</div>
+        return <div className="container">{this.getLocation()}</div>
     }
 
 }

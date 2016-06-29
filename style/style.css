@@ -1,2 +1,46 @@
-.topbar{height:50px;width:100%;background-color:red}
+/* ==============================
+   VARIABLES
+============================== */
+/* ==============================
+   BASIC
+============================== */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px; }
+
+.app, body {
+  background-color: #BFBFBF; }
+
+ul {
+  margin-bottom: 0; }
+
+/* ==============================
+   NAVBAR
+============================== */
+.topbar {
+  height: 50px;
+  width: 100%;
+  background-color: #22313F; }
+  .topbar .input-group {
+    max-width: 70%;
+    float: right;
+    margin-top: 8px; }
+    .topbar .input-group .input-group-btn button {
+      background-color: #BFBFBF; }
+    .topbar .input-group .input-group-btn i {
+      color: #22313F; }
+  .topbar .logo {
+    max-width: 30%;
+    float: left;
+    color: #BFBFBF;
+    font-weight: bold;
+    font-family: "Cabin Sketch", cursive;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+    margin-top: 10px; }
+
+/* ==============================
+   SEARCH RESULTS
+============================== */
+
 /*# sourceMappingURL=style.css.map */

@@ -1,15 +1,17 @@
 import React from 'react';
 import SearchBar from './searchbar';
 
-const NavBar = () => {
+const Navbar = () => {
     return (
         <div>
             <div className="container-fluid topbar">
-                <h4>Pizza Hunter</h4>
-                <SearchBar />
+                <div className="container">
+                    <h3 className="logo">Fika</h3>
+                    <SearchBar />
+                </div>
             </div>
         </div>
     );
 }
 
-export default NavBar;
+export default Navbar;

@@ -22,16 +22,18 @@ class CakeList extends Component {
                 }
 
                 return (
-                    <div key={place.venue.id} className="col-sm-6">
-                        <img src={photo} alt="Picture from cafe" />
-                        <Link to={'/cake/' + place.venue.id}><h6>{place.venue.name}</h6></Link>
-                        {place.venue.rating}
-                        <div className="address">
-                            <p>{place.venue.location.formattedAddress[0]}</p>
-                            <p>{place.venue.location.formattedAddress[1]}</p>
-                            <p>{place.venue.location.formattedAddress[2]}</p>
+                    <Link key={place.venue.id} to={'/cake/' + place.venue.id}>
+                        <div className="col-sm-6">
+                            <img src={photo} alt="Picture from cafe" />
+                            <h6>{place.venue.name}</h6>
+                            {place.venue.rating}
+                            <div className="address">
+                                <p>{place.venue.location.formattedAddress[0]}</p>
+                                <p>{place.venue.location.formattedAddress[1]}</p>
+                                <p>{place.venue.location.formattedAddress[2]}</p>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 );
             });
         }
