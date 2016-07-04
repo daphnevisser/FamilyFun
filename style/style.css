@@ -7,7 +7,10 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  background-color: #e9e9e9; }
+  background-color: #e9e9e9;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 30px; }
 
 /* ==============================
    NAVBAR
@@ -36,6 +39,20 @@ body {
 
 .location {
   padding: 15px 0 5px; }
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  height: 25px;
+  width: 100%;
+  background-color: #22313F;
+  color: #BFBFBF;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 3px; }
 
 /* ==============================
    SEARCH RESULTS
