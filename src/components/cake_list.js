@@ -13,24 +13,26 @@ class CakeList extends Component {
             return cakeList.map((place) => {
                 let photo;
                 if(place.venue.featuredPhotos) {
-                    photo = place.venue.featuredPhotos.items[0].prefix + "150x120" + place.venue.featuredPhotos.items[0].suffix;
-                    console.log("photo")
+                    photo = place.venue.featuredPhotos.items[0].prefix + "160x130" + place.venue.featuredPhotos.items[0].suffix;
                 } else {
-                    console.log("no photo")
-                    photo = "http://www.tigerbrands.com/wp-content/uploads/2014/07/default-placeholder-1024x1024-150x120.png";
+                    photo = "http://dummyimage.com/160x130/bfbfbf/ffffff&text=No+image+available";
 
                 }
 
                 return (
-                    <Link key={place.venue.id} to={'/cake/' + place.venue.id}>
-                        <div className="col-sm-6">
-                            <img src={photo} alt="Picture from cafe" />
-                            <h6>{place.venue.name}</h6>
-                            {place.venue.rating}
-                            <div className="address">
-                                <p>{place.venue.location.formattedAddress[0]}</p>
-                                <p>{place.venue.location.formattedAddress[1]}</p>
-                                <p>{place.venue.location.formattedAddress[2]}</p>
+                    <Link to={'/cake/' + place.venue.id} key={place.venue.id}>
+                        <div className="col-sm-6 item">
+                            <div className="box">
+                                <img src={photo} alt="Picture from cafe" />
+                                <h3><span className="name">{place.venue.name}</span><span className="rating">{place.venue.rating}</span></h3>
+                                <div className="address">
+                                    <p className="street">{place.venue.location.formattedAddress[0]}</p>
+                                    <p>{place.venue.location.formattedAddress[1]}</p>
+                                    <p>{place.venue.location.formattedAddress[2]}</p>
+                                </div>
+                                <div className="openClosed">
+                                    {place.venue.hours && <p>{place.venue.hours.status}</p>}
+                                </div>
                             </div>
                         </div>
                     </Link>
@@ -43,9 +45,7 @@ class CakeList extends Component {
         return(
             <div>
                 <div className="container">
-                    <ul>
                         {this.listVenues()}
-                    </ul>
                 </div>
             </div>
         );
