@@ -71,8 +71,7 @@ footer {
 /* ==============================
    SEARCH RESULTS
 ============================== */
-.name {
-    display: inline-block;
+.overflow {
     width: 310px;
     white-space: nowrap;
     overflow: hidden;
@@ -107,13 +106,17 @@ footer {
                 float: right;
                 font-size: 24px;
             }
+            .name {
+                display: inline-block;
+                @extend .overflow;
+            }
         }
         .address {
             color: $text-grey;
             font-weight: normal;
             padding-left: 180px;
             .street {
-                @extend .name;
+                @extend .overflow;
             }
             p {
                 margin: 0;
@@ -127,4 +130,32 @@ footer {
             bottom: 0;
         }
     }
+}
+/* ==============================
+   DETAIL PAGE
+============================== */
+.back {
+    font-size: 2em;
+    color: $text-grey;
+    margin: 10px 20px;
+    transition: color 0.5s ease;
+    &:hover {
+        color: $primary-color;
+    }
+}
+.detailContainer {
+    background-color: white;
+}
+
+/* Carousel */
+.innerSlider {
+    width: 95%;
+    margin: 10px auto;
+    img {
+        margin: 0 auto;
+    }
+}
+.slick-prev:before, .slick-next:before {
+  color: $text-grey;
+  font-size: 24px;
 }

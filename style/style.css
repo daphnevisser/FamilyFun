@@ -57,8 +57,7 @@ footer {
 /* ==============================
    SEARCH RESULTS
 ============================== */
-.name, .item .box .address .street {
-  display: inline-block;
+.overflow, .item .box h3 .name, .item .box .address .street {
   width: 310px;
   white-space: nowrap;
   overflow: hidden;
@@ -90,6 +89,8 @@ footer {
       .item .box h3 .rating {
         float: right;
         font-size: 24px; }
+      .item .box h3 .name {
+        display: inline-block; }
     .item .box .address {
       color: #7b7b7b;
       font-weight: normal;
@@ -102,5 +103,30 @@ footer {
       padding-left: 180px;
       position: absolute;
       bottom: 0; }
+
+/* ==============================
+   DETAIL PAGE
+============================== */
+.back {
+  font-size: 2em;
+  color: #7b7b7b;
+  margin: 10px 20px;
+  transition: color 0.5s ease; }
+  .back:hover {
+    color: #22313F; }
+
+.detailContainer {
+  background-color: white; }
+
+/* Carousel */
+.innerSlider {
+  width: 95%;
+  margin: 10px auto; }
+  .innerSlider img {
+    margin: 0 auto; }
+
+.slick-prev:before, .slick-next:before {
+  color: #7b7b7b;
+  font-size: 24px; }
 
 /*# sourceMappingURL=style.css.map */
