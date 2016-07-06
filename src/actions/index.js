@@ -8,6 +8,7 @@ const CLIENT_SECRET = config.client_secret;
 
 export const GET_CAKES = 'GET_CAKES';
 export const GET_DETAILS = 'GET_DETAILS';
+export const GET_PHOTOS = 'GET_PHOTOS';
 export const CLEAR_DETAILS = 'CLEAR_DETAILS';
 
 
@@ -25,6 +26,14 @@ export function getDetails(id) {
         type: GET_DETAILS,
         payload: request
     }
+}
+
+export function getPhotos(id) {
+    const request = axios.get(`${PLACE_URL}${id}/photos?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=20160617`);
+    return {
+        type: GET_PHOTOS,
+        payload: request
+  }
 }
 
 export function clearDetails() {

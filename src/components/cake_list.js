@@ -16,7 +16,6 @@ class CakeList extends Component {
                     photo = place.venue.featuredPhotos.items[0].prefix + "160x130" + place.venue.featuredPhotos.items[0].suffix;
                 } else {
                     photo = "http://dummyimage.com/160x130/bfbfbf/ffffff&text=No+image+available";
-
                 }
 
                 return (
