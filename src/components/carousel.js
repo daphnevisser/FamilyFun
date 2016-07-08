@@ -5,7 +5,6 @@ import Slider from 'react-slick';
 class Carousel extends Component {
     photosList() {
         const photos = this.props.photos[0].response.photos.items;
-        console.log(photos);
         return photos.map((photo) => {
             return (
                 <div key={photo.id}>

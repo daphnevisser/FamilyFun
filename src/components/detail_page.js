@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getDetails } from '../actions/index';
-import { getPhotos } from '../actions/index';
+import { getDetails, getPhotos } from '../actions/index';
 import { Link } from 'react-router';
 import Carousel from './carousel';
+import Map from './map';
 
 class DetailPage extends Component {
     componentWillMount() {
@@ -14,7 +14,9 @@ class DetailPage extends Component {
     render() {
         if (this.props.details[0]) {
             const details = this.props.details[0].response.venue;
-
+            const lat = details.location.lat;
+            const lon = details.location.lng;
+            console.log(details);
             return (
                 <div>
                     <div>
@@ -22,7 +24,23 @@ class DetailPage extends Component {
                     </div>
                     <div className="container detailContainer">
                         <Carousel />
-                        <h4>{details.name}</h4>
+                        <div className="mapArea">
+                            <Map lat={lat} lon={lon} markers={[{
+                                position: {
+                                    lat: lat,
+                                    lng: lon,
+                                },
+                                key: details.id,
+                                defaultAnimation: 2,
+                            }]}/>
+                        </div>
+                        <h2>{details.name}</h2>
+                        <div className="rating">
+                            <h4>{details.rating}</h4>
+                            <p>{details.ratingSignals} Votes</p>
+                        </div>
+
+
                     </div>
                 </div>
             );
