@@ -9,7 +9,7 @@ export default Map = (props) => {
             }
             googleMapElement={
                 <GoogleMap
-                    defaultZoom={18}
+                    defaultZoom={15}
                     defaultCenter={{ lat: props.lat, lng: props.lon }}
                 >
                 {props.markers.map((marker, index) => {

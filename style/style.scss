@@ -145,6 +145,7 @@ footer {
 }
 .detailContainer {
     background-color: white;
+    padding-top: 10px;
 }
 
 /* Carousel */
@@ -161,10 +162,46 @@ footer {
 }
 
 /* Map */
-
 .mapArea {
     height: 300px;
     width: 300px;
     float: right;
-    margin-top: 15px;
+    margin-top: 5px;
+}
+
+/* Info */
+.infoBox {
+    color: $text-grey;
+    .name {
+        color: $primary-color;
+        display: inline;
+    }
+    .rating {
+        float: right;
+        text-align: center;
+        margin-right: 20px;
+        h3 {
+            margin: 0;
+        }
+    }
+    .address {
+        margin-top: 15px;
+        p {
+            display: inline;
+        }
+    }
+    p {
+        margin: 0;
+        line-height: 25px;
+        i {
+            margin: 0 5px 0 0;
+            font-size: 18px;
+            color: $primary-color;
+            min-width: 18px;
+            text-align: center;
+        }
+        a {
+            color: $text-grey;
+        }
+    }
 }

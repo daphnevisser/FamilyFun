@@ -116,7 +116,8 @@ footer {
     color: #22313F; }
 
 .detailContainer {
-  background-color: white; }
+  background-color: white;
+  padding-top: 10px; }
 
 /* Carousel */
 .innerSlider {
@@ -134,6 +135,34 @@ footer {
   height: 300px;
   width: 300px;
   float: right;
-  margin-top: 15px; }
+  margin-top: 5px; }
+
+/* Info */
+.infoBox {
+  color: #7b7b7b; }
+  .infoBox .name {
+    color: #22313F;
+    display: inline; }
+  .infoBox .rating {
+    float: right;
+    text-align: center;
+    margin-right: 20px; }
+    .infoBox .rating h3 {
+      margin: 0; }
+  .infoBox .address {
+    margin-top: 15px; }
+    .infoBox .address p {
+      display: inline; }
+  .infoBox p {
+    margin: 0;
+    line-height: 25px; }
+    .infoBox p i {
+      margin: 0 5px 0 0;
+      font-size: 18px;
+      color: #22313F;
+      min-width: 18px;
+      text-align: center; }
+    .infoBox p a {
+      color: #7b7b7b; }
 
 /*# sourceMappingURL=style.css.map */

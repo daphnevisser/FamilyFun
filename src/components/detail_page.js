@@ -20,7 +20,7 @@ class DetailPage extends Component {
             return (
                 <div>
                     <div>
-                        <Link to="/"><i className="glyphicon glyphicon-arrow-left back"></i></Link>
+                        <Link to="/"><i className="ion-arrow-left-c back"></i></Link>
                     </div>
                     <div className="container detailContainer">
                         <Carousel />
@@ -34,13 +34,21 @@ class DetailPage extends Component {
                                 defaultAnimation: 2,
                             }]}/>
                         </div>
-                        <h2>{details.name}</h2>
-                        <div className="rating">
-                            <h4>{details.rating}</h4>
-                            <p>{details.ratingSignals} Votes</p>
+                        <div className="infoBox">
+                            <h2 className="name">{details.name}</h2>
+                            <div className="rating">
+                                <h3 style={{color: '#' + details.ratingColor}} >{details.rating}</h3>
+                                <p>{details.ratingSignals || "No"} Votes</p>
+                            </div>
+                            <div className="address">
+                                <p><i className="ion-home"></i>{details.location.formattedAddress[0]}, </p>
+                                <p>{details.location.formattedAddress[1]}, </p>
+                                <p>{details.location.formattedAddress[2]}</p>
+                            </div>
+                            {details.contact.phone && <p><i className="ion-ios-telephone"></i><a href={"tel:" + details.contact.phone}>{details.contact.formattedPhone}</a></p>}
+                            {details.contact.twitter && <p><i className="ion-social-twitter"></i><a target="_blank" href={"http://www.twitter.com/" + details.contact.twitter}>Twitter</a></p>}
+                            {details.url && <p><i className="ion-android-laptop"></i><a target="_blank" href={details.url}>Website</a></p>}
                         </div>
-
-
                     </div>
                 </div>
             );
