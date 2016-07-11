@@ -143,9 +143,17 @@ footer {
         color: $primary-color;
     }
 }
+.foursquare {
+    float: right;
+    margin: 10px 20px;
+    color: $text-grey;
+}
 .detailContainer {
     background-color: white;
     padding-top: 10px;
+    height: auto;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 /* Carousel */
@@ -167,6 +175,16 @@ footer {
     width: 300px;
     float: right;
     margin-top: 5px;
+    .more {
+        .btn {
+            width: 100%;
+            margin-top: 5px;
+        }
+        .btn-default {
+            background-color: $primary-color;
+            color: $text-color-light;
+        }
+    }
 }
 
 /* Info */
@@ -193,15 +211,28 @@ footer {
     p {
         margin: 0;
         line-height: 25px;
+        display: block;
+        overflow: hidden;
         i {
-            margin: 0 5px 0 0;
+            margin: 0 10px 0 0;
+            float: left;
             font-size: 18px;
             color: $primary-color;
-            min-width: 18px;
-            text-align: center;
+            height: 100%;
+            width: 20px;
+            line-height: 1;
         }
         a {
             color: $text-grey;
+        }
+    }
+    .openingTimes {
+        h4 {
+            color: $primary-color;
+            margin-top: 25px;
+        }
+        .time {
+            margin-left: 10px;
         }
     }
 }

@@ -115,9 +115,17 @@ footer {
   .back:hover {
     color: #22313F; }
 
+.foursquare {
+  float: right;
+  margin: 10px 20px;
+  color: #7b7b7b; }
+
 .detailContainer {
   background-color: white;
-  padding-top: 10px; }
+  padding-top: 10px;
+  height: auto;
+  margin-bottom: 30px;
+  padding-bottom: 50px; }
 
 /* Carousel */
 .innerSlider {
@@ -136,6 +144,12 @@ footer {
   width: 300px;
   float: right;
   margin-top: 5px; }
+  .mapArea .more .btn {
+    width: 100%;
+    margin-top: 5px; }
+  .mapArea .more .btn-default {
+    background-color: #22313F;
+    color: #BFBFBF; }
 
 /* Info */
 .infoBox {
@@ -155,14 +169,23 @@ footer {
       display: inline; }
   .infoBox p {
     margin: 0;
-    line-height: 25px; }
+    line-height: 25px;
+    display: block;
+    overflow: hidden; }
     .infoBox p i {
-      margin: 0 5px 0 0;
+      margin: 0 10px 0 0;
+      float: left;
       font-size: 18px;
       color: #22313F;
-      min-width: 18px;
-      text-align: center; }
+      height: 100%;
+      width: 20px;
+      line-height: 1; }
     .infoBox p a {
       color: #7b7b7b; }
+  .infoBox .openingTimes h4 {
+    color: #22313F;
+    margin-top: 25px; }
+  .infoBox .openingTimes .time {
+    margin-left: 10px; }
 
 /*# sourceMappingURL=style.css.map */
