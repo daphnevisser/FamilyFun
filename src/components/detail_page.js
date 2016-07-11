@@ -4,6 +4,7 @@ import { getDetails, getPhotos } from '../actions/index';
 import { Link } from 'react-router';
 import Carousel from './carousel';
 import Map from './map';
+import Reviews from './reviews';
 import config from '../config';
 
 class DetailPage extends Component {
@@ -42,7 +43,7 @@ class DetailPage extends Component {
                     </div>
                     <div className="container detailContainer">
                         <Carousel />
-                        <div className="mapArea">
+                        <div className="mapArea clearfix">
                             <Map lat={lat} lon={lon} markers={[{
                                 position: {
                                     lat: lat,
@@ -72,6 +73,9 @@ class DetailPage extends Component {
                                 <h4>Opening times:</h4>
                                 {this.getTimes()}
                             </div>
+                        </div>
+                        <div className="tips">
+                            <Reviews />
                         </div>
                     </div>
                 </div>
