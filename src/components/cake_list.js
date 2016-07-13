@@ -9,9 +9,9 @@ class CakeList extends Component {
     listVenues() {
         $(".welcome").css("display", "none");
         this.props.clearDetails();
-        if (this.props.cakes[0]) {
-            console.log(this.props.cakes[0].response.groups[0].items);
-            const cakeList = this.props.cakes[0].response.groups[0].items;
+        const data = this.props.cakes[0];
+        if (data && data.meta.code === 200) {
+            const cakeList = data.response.groups[0].items;
             return cakeList.map((place) => {
                 let photo;
                 if(place.venue.featuredPhotos) {
@@ -39,7 +39,7 @@ class CakeList extends Component {
                     </Link>
                 );
             });
-        }
+        } 
     }
 
     render() {
