@@ -6,7 +6,6 @@ $font-special: 'Cabin Sketch', cursive;
 $primary-color: #22313F;
 $text-color-light: #BFBFBF;
 $text-grey: #7b7b7b;
-
 /* ==============================
    BASIC
 ============================== */
@@ -16,7 +15,7 @@ body {
     background-color: #e9e9e9;
     position: relative;
     min-height: 100vh;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
 }
 .clearfix {
     &:before,
@@ -76,7 +75,31 @@ footer {
     text-align: center;
     padding-top: 3px;
 }
-
+/* ==============================
+   WELCOME
+============================== */
+.welcome {
+    height: 88.3vh;
+    background: linear-gradient(rgba(34, 49, 63, 0.7), rgba(34, 49, 63, 0.7)), url('./cake.jpg');
+    background-size: cover;
+    position: relative;
+    .box {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        right: 20%;
+        transform: translateY(-50%);
+        h1, h2 {
+            color: white;
+            font-family: $font-special;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3.5em;
+        }
+    }
+}
 /* ==============================
    SEARCH RESULTS
 ============================== */
@@ -164,7 +187,6 @@ footer {
     margin-bottom: 30px;
     padding-bottom: 10px;
 }
-
 /* Carousel */
 .innerSlider {
     width: 95%;
@@ -177,7 +199,6 @@ footer {
   color: $text-grey;
   font-size: 24px;
 }
-
 /* Map */
 .mapArea {
     height: 300px;
@@ -195,7 +216,6 @@ footer {
         }
     }
 }
-
 /* Info */
 .infoBox {
     color: $text-grey;
@@ -270,3 +290,7 @@ footer {
         }
     }
 }
+/* ==============================
+   MEDIA QUERIES
+============================== */
+@import '_queries';

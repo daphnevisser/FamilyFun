@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { clearDetails } from '../actions/index';
+import $ from 'jquery';
 
 
 class CakeList extends Component {
     listVenues() {
+        $(".welcome").css("display", "none");
         this.props.clearDetails();
         if (this.props.cakes[0]) {
             console.log(this.props.cakes[0].response.groups[0].items);
@@ -20,7 +22,7 @@ class CakeList extends Component {
 
                 return (
                     <Link to={'/cake/' + place.venue.id} key={place.venue.id}>
-                        <div className="col-sm-6 item">
+                        <div className="col-lg-6 item">
                             <div className="box">
                                 <img src={photo} alt="Picture from cafe" />
                                 <h3><span className="name">{place.venue.name}</span><span className="rating">{place.venue.rating}</span></h3>

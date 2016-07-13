@@ -10,7 +10,7 @@ body {
   background-color: #e9e9e9;
   position: relative;
   min-height: 100vh;
-  padding-bottom: 30px; }
+  padding-bottom: 25px; }
 
 .clearfix:before, .clearfix:after {
   content: " ";
@@ -59,6 +59,28 @@ footer {
   overflow: hidden;
   text-align: center;
   padding-top: 3px; }
+
+/* ==============================
+   WELCOME
+============================== */
+.welcome {
+  height: 88.3vh;
+  background: linear-gradient(rgba(34, 49, 63, 0.7), rgba(34, 49, 63, 0.7)), url("./cake.jpg");
+  background-size: cover;
+  position: relative; }
+  .welcome .box {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    right: 20%;
+    transform: translateY(-50%); }
+    .welcome .box h1, .welcome .box h2 {
+      color: white;
+      font-family: "Cabin Sketch", cursive;
+      text-transform: uppercase;
+      text-align: center; }
+    .welcome .box h1 {
+      font-size: 3.5em; }
 
 /* ==============================
    SEARCH RESULTS
@@ -212,5 +234,110 @@ footer {
     color: #7b7b7b; }
   .tips .reviewBox .name {
     color: #22313F; }
+
+/* ==============================
+   MEDIA QUERIES
+============================== */
+@media (max-width: 991px) {
+  .mapArea {
+    height: 200px;
+    width: 100%;
+    margin-top: 5px;
+    float: none; }
+
+  .infoBox {
+    padding-top: 50px; }
+    .infoBox .name {
+      font-size: 24px; }
+    .infoBox .openingTimes {
+      margin-bottom: 15px; }
+
+  .tips .reviewBox img {
+    height: 30px;
+    border-radius: 15px; }
+  .tips .reviewBox .tip {
+    margin-left: 45px; } }
+@media (max-width: 670px) {
+  .infoBox .name {
+    display: block; }
+  .infoBox .rating {
+    float: none;
+    text-align: left; }
+
+  .innerSlider {
+    width: 93%; } }
+@media (max-width: 640px) {
+  .overflow, .item .box h3 .name, .item .box .address .street {
+    width: 230px; }
+
+  .item .box h3 .rating, .item .box h3 .name {
+    font-size: 16px; }
+
+  .infoBox .name {
+    font-size: 18px; }
+  .infoBox .rating h3 {
+    font-size: 18px; }
+  .infoBox .openingTimes h4 {
+    font-size: 16px;
+    font-weight: bold; } }
+@media (max-width: 525px) {
+  .overflow, .item .box h3 .name, .item .box .address .street {
+    width: 150px; } }
+@media (max-width: 440px) {
+  .item .box img {
+    margin: 0;
+    width: 130px;
+    height: 135px; }
+  .item .box h3 {
+    padding-left: 140px; }
+  .item .box .address {
+    padding-left: 140px; }
+  .item .box .openClosed {
+    padding-left: 140px; }
+
+  .infoBox {
+    font-size: 12px; }
+    .infoBox .name {
+      font-size: 16px; }
+    .infoBox .rating h3 {
+      font-size: 16px; }
+    .infoBox .openingTimes h4 {
+      font-size: 14px;
+      font-weight: bold; } }
+@media (max-width: 410px) {
+  .welcome .box h1 {
+    font-size: 2.5em; }
+
+  .overflow, .item .box h3 .name, .item .box .address .street {
+    width: 120px; } }
+@media (max-width: 365px) {
+  body {
+    overflow-x: hidden; }
+
+  .overflow, .item .box h3 .name, .item .box .address .street {
+    width: 98px; }
+
+  .item .box img {
+    width: 120px;
+    height: 135px; }
+  .item .box h3 {
+    padding-left: 125px;
+    margin-top: 0;
+    line-height: 12px; }
+    .item .box h3 .rating, .item .box h3 .name {
+      font-size: 12px; }
+  .item .box .address {
+    padding-left: 125px;
+    font-size: 12px; }
+  .item .box .openClosed {
+    padding-left: 125px; }
+
+  .infoBox .address p {
+    display: block; }
+  .infoBox .address .line {
+    margin-left: 30px; }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 18px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -61,9 +61,9 @@ class DetailPage extends Component {
                                 <p>{details.ratingSignals || "No"} Votes</p>
                             </div>
                             <div className="address">
-                                <p><i className="ion-home"></i>{details.location.formattedAddress[0]}, </p>
-                                <p>{details.location.formattedAddress[1]}, </p>
-                                <p>{details.location.formattedAddress[2]}</p>
+                                <p><i className="ion-home"></i><span>{details.location.formattedAddress[0]}, </span></p>
+                                <p className="line">{details.location.formattedAddress[1]}, </p>
+                                <p className="line">{details.location.formattedAddress[2]}</p>
                             </div>
                             {details.contact.phone && <p><i className="ion-ios-telephone"></i><a href={"tel:" + details.contact.phone}>{details.contact.formattedPhone}</a></p>}
                             {details.contact.twitter && <p><i className="ion-social-twitter"></i><a target="_blank" href={"http://www.twitter.com/" + details.contact.twitter}>@{details.contact.twitter}</a></p>}
