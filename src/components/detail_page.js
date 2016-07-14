@@ -34,7 +34,6 @@ class DetailPage extends Component {
             const lat = details.location.lat;
             const lon = details.location.lng;
             const CLIENT_ID = config.client_id;
-            console.log(details);
             return (
                 <div>
                     <div>

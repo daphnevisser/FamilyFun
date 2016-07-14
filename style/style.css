@@ -65,6 +65,7 @@ footer {
 ============================== */
 .welcome {
   height: 88.3vh;
+  background: -webkit-linear-gradient(rgba(34, 49, 63, 0.7), rgba(34, 49, 63, 0.7)), url("./cake.jpg");
   background: linear-gradient(rgba(34, 49, 63, 0.7), rgba(34, 49, 63, 0.7)), url("./cake.jpg");
   background-size: cover;
   position: relative; }
@@ -73,6 +74,7 @@ footer {
     top: 50%;
     left: 20%;
     right: 20%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
     .welcome .box h1, .welcome .box h2 {
       color: white;
@@ -102,6 +104,7 @@ footer {
     padding: 10px;
     background-color: white;
     position: relative;
+    -webkit-transition: border 0.5s ease;
     transition: border 0.5s ease; }
     .item .box:hover {
       border: 2px solid #22313F; }
@@ -139,6 +142,7 @@ footer {
   font-size: 2em;
   color: #7b7b7b;
   margin: 10px 20px;
+  -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease; }
   .back:hover {
     color: #22313F; }
