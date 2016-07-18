@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import { clearDetails } from '../actions/index';
 import $ from 'jquery';
 
 
 class CakeList extends Component {
     listVenues() {
         $(".welcome").css("display", "none");
-        this.props.clearDetails();
         const data = this.props.cakes[0];
         if (data && data.meta.code === 200) {
             const cakeList = data.response.groups[0].items;
@@ -39,7 +37,7 @@ class CakeList extends Component {
                     </Link>
                 );
             });
-        } 
+        }
     }
 
     render() {
@@ -59,4 +57,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {clearDetails})(CakeList);
+export default connect(mapStateToProps)(CakeList);

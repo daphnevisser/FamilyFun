@@ -79,7 +79,7 @@ footer {
    WELCOME
 ============================== */
 .welcome {
-    height: 88.3vh;
+    height: 88.5vh;
     background: -webkit-linear-gradient(rgba(34, 49, 63, 0.7), rgba(34, 49, 63, 0.7)), url('./cake.jpg');
     background: linear-gradient(rgba(34, 49, 63, 0.7), rgba(34, 49, 63, 0.7)), url('./cake.jpg');
     background-size: cover;
@@ -169,10 +169,18 @@ footer {
 /* ==============================
    DETAIL PAGE
 ============================== */
+.arrow {
+    height: 50px;
+    a {
+        position: absolute;
+        left: 0;
+        top: 55px;
+    }
+}
 .back {
     font-size: 2em;
     color: $text-grey;
-    margin: 10px 20px;
+    margin: 20px;
     -webkit-transition: color 0.5s ease;
     transition: color 0.5s ease;
     &:hover {
@@ -180,9 +188,11 @@ footer {
     }
 }
 .foursquare {
-    float: right;
-    margin: 10px 20px;
+    position: absolute;
+    right: 0;
     color: $text-grey;
+    display: inline-block;
+    margin: 15px 20px;
 }
 .detailContainer {
     background-color: white;

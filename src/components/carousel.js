@@ -19,7 +19,7 @@ class Carousel extends Component {
             dots: false,
             infinite: false,
             slidesToShow: 4,
-            slidesToScroll: 2,
+            slidesToScroll: 1,
             className: 'innerSlider',
             lazyLoad: true,
             draggable: true,

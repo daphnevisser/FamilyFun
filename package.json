@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "build-production": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +30,7 @@
     "axios": "^0.12.0",
     "babel-preset-stage-1": "^6.1.18",
     "bootstrap": "^3.3.6",
+    "es6-promise": "^3.2.1",
     "google-map-react": "^0.14.4",
     "jsonp": "^0.2.0",
     "react": "^0.14.3",

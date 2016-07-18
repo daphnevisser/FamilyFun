@@ -1,3 +1,4 @@
+require('es6-promise').polyfill();
 import axios from 'axios';
 import config from '../config';
 
@@ -9,7 +10,6 @@ const CLIENT_SECRET = config.client_secret;
 export const GET_CAKES = 'GET_CAKES';
 export const GET_DETAILS = 'GET_DETAILS';
 export const GET_PHOTOS = 'GET_PHOTOS';
-export const CLEAR_DETAILS = 'CLEAR_DETAILS';
 
 
 export function getCakes(location) {
@@ -34,10 +34,4 @@ export function getPhotos(id) {
         type: GET_PHOTOS,
         payload: request
   }
-}
-
-export function clearDetails() {
-    return {
-        type: CLEAR_DETAILS
-    }
 }
