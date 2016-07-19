@@ -63,7 +63,6 @@ class DetailPage extends Component {
                 </div>
             </div>
         );
-
     }
     getTimes() {
         if (this.props.details[0].response.venue.hours) {
