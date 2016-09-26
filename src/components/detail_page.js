@@ -14,7 +14,7 @@ class DetailPage extends Component {
         this.props.getPhotos(this.props.params.id);
     }
     getDetails() {
-        const details = this.props.details[0].response.venue;
+        const details = this.props.details.response.venue;
         const lat = details.location.lat;
         const lon = details.location.lng;
         const CLIENT_ID = config.client_id;
@@ -65,8 +65,8 @@ class DetailPage extends Component {
         );
     }
     getTimes() {
-        if (this.props.details[0].response.venue.hours) {
-            const hours = this.props.details[0].response.venue.hours.timeframes;
+        if (this.props.details.response.venue.hours) {
+            const hours = this.props.details.response.venue.hours.timeframes;
             return hours.map((times) => {
                 return (
                     <div key={times.days}>
@@ -82,7 +82,7 @@ class DetailPage extends Component {
     }
     render() {
         $(".welcome").css("display", "none");
-        if (this.props.details[0]) {
+        if (this.props.details) {
             return (
                 <div>
                     {this.getDetails()}

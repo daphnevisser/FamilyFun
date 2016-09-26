@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 
 class Carousel extends Component {
     photosList() {
-        const photos = this.props.photos[0].response.photos.items;
+        const photos = this.props.photos.response.photos.items;
         return photos.map((photo) => {
             return (
                 <div key={photo.id}>
@@ -27,7 +27,7 @@ class Carousel extends Component {
                         { breakpoint: 768, settings: { slidesToShow: 2 } },
                         { breakpoint: 1024, settings: { slidesToShow: 3 } }]
         }
-        if (this.props.photos[0] && this.props.photos[0].response.photos.items.length >= 1) {
+        if (this.props.photos && this.props.photos.response.photos.items.length >= 1) {
             return (
                 <div>
                     <Slider {...settings}>

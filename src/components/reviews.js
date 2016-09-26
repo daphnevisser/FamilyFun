@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class Reviews extends Component {
     getTips() {
-        const tips = this.props.details[0].response.venue.tips.groups[0].items;
+        const tips = this.props.details.response.venue.tips.groups[0].items;
         return tips.map((review) => {
             return (
                 <div key={review.id} className="reviewBox clearfix">
