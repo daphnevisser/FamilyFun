@@ -38,10 +38,4 @@ class SearchBar extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        cakes: state.cakes
-    }
-}
-
-export default connect(mapStateToProps, {getCakes})(SearchBar);
+export default connect(null, {getCakes})(SearchBar);

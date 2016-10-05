@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
 
-export default class App extends Component {
-    render() {
-        return (
-            <div>
-                <Navbar />
-                {this.props.children}
-                <Footer />
-            </div>
-        );
-    }
-}
+const App = (props) => {
+  return (
+    <div>
+      <Navbar />
+      {props.children}
+      <Footer />
+    </div>
+  );
+};
+
+export default App;
