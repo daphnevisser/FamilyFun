@@ -14,10 +14,8 @@ class DetailPage extends Component {
         this.props.getPhotos(this.props.params.id);
     }
     componentDidUpdate() {
-   ReactDOM.findDOMNode(this).scrollIntoView();
- }
-
-
+        ReactDOM.findDOMNode(this).scrollIntoView();
+    }
 
     getDetails() {
         const details = this.props.details.response.venue;
@@ -27,7 +25,10 @@ class DetailPage extends Component {
         return (
             <div>
                 <div className="arrow">
-                    <Link to="/search"><i className="ion-arrow-left-c back"></i></Link>
+                    {this.props.cakes ?
+                        <Link to="/search"><i className="ion-arrow-left-c back"></i></Link> :
+                        <Link to="/"><i className="ion-arrow-left-c back"></i></Link>
+                    }
                     <p className="foursquare">Powered by Foursquare</p>
                 </div>
                 <div className="container detailContainer">
@@ -95,7 +96,7 @@ class DetailPage extends Component {
             );
         } else {
             return (
-                <div>...</div>
+                <div className="loading">Loading...</div>
             );
         }
     }
@@ -104,7 +105,8 @@ class DetailPage extends Component {
 function mapStateToProps(state) {
     return {
         details: state.details,
-        photos: state.photos
+        photos: state.photos,
+        cakes: state.cakes
     }
 }
 
