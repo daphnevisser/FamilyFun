@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { getDetails, getPhotos } from '../actions/index';
 import { Link } from 'react-router';
@@ -12,6 +13,12 @@ class DetailPage extends Component {
         this.props.getDetails(this.props.params.id);
         this.props.getPhotos(this.props.params.id);
     }
+    componentDidUpdate() {
+   ReactDOM.findDOMNode(this).scrollIntoView();
+ }
+
+
+
     getDetails() {
         const details = this.props.details.response.venue;
         const lat = details.location.lat;
