@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-import $ from 'jquery';
+
 
 
 class CakeList extends Component {
     listVenues() {
-        $(".welcome").css("display", "none");
         const data = this.props.cakes;
         if (data && data.meta.code === 200) {
             const cakeList = data.response.groups[0].items;

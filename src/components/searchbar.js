@@ -19,7 +19,7 @@ class SearchBar extends Component {
 
     onFormSubmit(event) {
         event.preventDefault();
-        browserHistory.push('/');
+        browserHistory.push('/search');
         this.props.getCakes(this.state.term);
     }
 

@@ -6,7 +6,6 @@ import Carousel from './carousel';
 import Map from './map';
 import Reviews from './reviews';
 import config from '../config';
-import $ from 'jquery';
 
 class DetailPage extends Component {
     componentWillMount() {
@@ -21,7 +20,7 @@ class DetailPage extends Component {
         return (
             <div>
                 <div className="arrow">
-                    <Link to="/"><i className="ion-arrow-left-c back"></i></Link>
+                    <Link to="/search"><i className="ion-arrow-left-c back"></i></Link>
                     <p className="foursquare">Powered by Foursquare</p>
                 </div>
                 <div className="container detailContainer">
@@ -81,7 +80,6 @@ class DetailPage extends Component {
         }
     }
     render() {
-        $(".welcome").css("display", "none");
         if (this.props.details) {
             return (
                 <div>
