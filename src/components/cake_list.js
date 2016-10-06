@@ -1,12 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import { Link } from 'react-router';
 
-
-
-class CakeList extends Component {
-    listVenues() {
-        const cakeList = this.props.cakes.response.groups[0].items;
+const CakeList = (props) => {
+    const listVenues = () => {
+        const cakeList = props.cakes.response.groups[0].items;
         return cakeList.map((place) => {
             let photo;
             if(place.venue.featuredPhotos) {
@@ -35,28 +32,19 @@ class CakeList extends Component {
             );
         });
     }
-
-    render() {
-        const data = this.props.cakes;
-        if (!data) {
-            return (
-                <div className="loading">Loading...</div>
-            );
-        }
+    const data = props.cakes;
+    if (!data) {
         return (
-            <div>
-                <div className="container">
-                        {this.listVenues()}
-                </div>
-            </div>
+            <div className="loading">Loading...</div>
         );
     }
+    return (
+        <div>
+            <div className="container">
+                {listVenues()}
+            </div>
+        </div>
+    );
 }
 
-function mapStateToProps(state) {
-    return {
-        cakes: state.cakes
-    }
-}
-
-export default connect(mapStateToProps)(CakeList);
+export default CakeList;

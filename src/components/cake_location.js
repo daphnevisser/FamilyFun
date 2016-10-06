@@ -1,27 +1,16 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 
-class CakeLocation extends Component {
-    getLocation() {
-        const data = this.props.cakes;
+const CakeLocation = (props) => {
+    const getLocation = () => {
+        const data = props.cakes;
         if (data && data.meta.code === 200) {
-            const location = this.props.cakes.response.geocode.displayString;
+            const location = props.cakes.response.geocode.displayString;
             return <p className="location">Suggested places in: {location}</p>;
         } else if (data && data.meta.code === 400) {
-            return <div className="alert alert-danger" role="alert">Location could not be found. Please try again</div>
+            return <p className="location location-not-found">Location could not be found. Please try again</p>
         }
     }
-
-    render() {
-        return <div className="container">{this.getLocation()}</div>
-    }
-
+    return <div className="container">{getLocation()}</div>
 }
 
-function mapStateToProps(state) {
-    return {
-        cakes: state.cakes
-    }
-}
-
-export default connect(mapStateToProps)(CakeLocation);
+export default CakeLocation;
