@@ -32,7 +32,7 @@ class DetailPage extends Component {
                     <p className="foursquare">Powered by Foursquare</p>
                 </div>
                 <div className="container detailContainer">
-                    <Carousel />
+                    <Carousel photos={this.props.photos}/>
                     <div className="mapArea clearfix">
                         <Map lat={lat} lon={lon} markers={[{
                             position: {
