@@ -33,18 +33,24 @@ const CakeList = (props) => {
         });
     }
     const data = props.cakes;
+    //Show loading text when there is no data yet
     if (!data) {
         return (
             <div className="loading">Loading...</div>
         );
     }
-    return (
-        <div>
-            <div className="container">
-                {listVenues()}
+    //List the venues if request is successful
+    if (data.meta.code === 200) {
+        return (
+            <div>
+                <div className="container">
+                    {listVenues()}
+                </div>
             </div>
-        </div>
-    );
+        );
+    } else {
+        return <div></div>
+    }
 }
 
 export default CakeList;

@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 
-class Reviews extends Component {
-    getTips() {
-        const tips = this.props.details.response.venue.tips.groups[0].items;
+const Reviews = (props) => {
+    const getTips = () => {
+        const tips = props.details.response.venue.tips.groups[0].items;
         return tips.map((review) => {
             return (
                 <div key={review.id} className="reviewBox clearfix">
@@ -14,22 +13,13 @@ class Reviews extends Component {
             );
         });
     }
-    render() {
-
-        return (
-            <div className="row">
-                <div className="col-md-12">
-                    {this.getTips()}
-                </div>
+    return (
+        <div className="row">
+            <div className="col-md-12">
+                {getTips()}
             </div>
-        );
-    }
+        </div>
+    );
 }
 
-function mapStateToProps(state) {
-    return {
-        details: state.details
-    }
-}
-
-export default connect(mapStateToProps)(Reviews);
+export default Reviews;

@@ -65,7 +65,7 @@ class DetailPage extends Component {
                         </div>
                     </div>
                     <div className="tips">
-                        <Reviews />
+                        <Reviews details={this.props.details} />
                     </div>
                 </div>
             </div>
