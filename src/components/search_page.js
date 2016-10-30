@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import CakeList from './cake_list'
 import CakeLocation from './cake_location';
 
-export default class SearchPage extends Component {
+class SearchPage extends Component {
     render() {
         return (
             <div>
